@@ -259,6 +259,7 @@ section .section__contain #section__squareimg {
 }
 .section3 .section3__contain p {
   width: 90%;
+  margin-bottom: 50px;
 }
 .section3 #section3__img {
   background-image: url("../img/absolut.jpeg");
@@ -390,6 +391,9 @@ footer a:hover {
 
   .section4 .section4__options-text {
     width: 100%;
+  }
+  .section4 .section3 .section3__contain p {
+    margin-bottom: 50px;
   }
   .section4 button {
     width: 30%;

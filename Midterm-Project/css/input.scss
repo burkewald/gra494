@@ -190,6 +190,7 @@ section{
     flex-grow: 0;
     p{
       width:90%;
+      margin-bottom:50px;
     }
   }
 
@@ -340,7 +341,14 @@ footer{
     .section4__options-text{
       width: 100%;
     }
-
+  .section3{
+    .section3__contain{
+      p{
+          margin-bottom:50px;
+      }
+    }
+  }
+  
     button{
       width:30%;
       align-self: center;
