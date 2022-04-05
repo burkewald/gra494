@@ -1,3 +1,4 @@
+//Display of the Navigation on mobile//
 function myFunction() {
 var x = document.getElementById("myLinks");
 var y = document.getElementById("bars");
