@@ -31,3 +31,9 @@ BEM
 
 ##Internet Host
   Github
+
+----------------------
+
+##How I Built My Website
+  My Css Methodology Consists of BEM.
+  
