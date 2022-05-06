@@ -1,0 +1,777 @@
+// h3 starts at $base-font-size
+// heading grow from h3 to h1 by $heading-scale
+$base-font-size: 16px;
+$heading-scale: 12; // amount of px heading grow from h3 to h1
+
+@for $i from 1 through 3 {
+    h#{$i} {font-size: $base-font-size + $heading-scale * (3 - $i);font-family: 'Poppins', sans-serif;}}
+
+//font
+$sans-serif: 'Poppins', sans-serif;
+$fontcolor: #333;
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+$line-height-m: 1.6;
+$margin-10: 10px 0;
+
+//color
+$pramarycolor-blue: #00426a;
+$pramarycolor-burgundy: #6c1d45;
+$pramarycolor-grey: #d3d3d3;
+$secondarycolor-yellow: #f6a623;
+$secondarycolor-grey: #e5e1e6;
+
+// shadow
+$boxshadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+
+//image
+$width-100: 100%;
+
+
+
+
+//
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: $sans-serif;
+    font-weight: $normal;
+    line-height: $line-height-m;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    font-family: $sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $fontcolor;
+}
+
+h1,
+h2{
+    font-weight: $bold;
+    line-height: $line-height-m;
+    margin: $margin-10;
+}
+
+
+
+
+p {
+    margin: $margin-10;
+}
+
+img {
+    width: $width-100;
+}
+
+button {
+    color: $fontcolor;
+    background-color: $secondarycolor-yellow;
+    margin: 0 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color:$pramarycolor-burgundy;
+    color:white;
+}
+
+
+// new navbar
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: $pramarycolor-blue;
+    overflow: hidden;
+
+  }
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px
+  }
+.navbtn{
+  padding:10px;
+  align-items: center;
+}
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+/*Burkes changes*/
+
+.icon__section-wrap{
+  text-align:center;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  background-color: $pramarycolor-burgundy;
+  color:white;
+}
+.icon__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  margin-right:10%;
+  margin-top: 5%;
+  flex-wrap: wrap;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.icon__wrap {
+  text-align:left;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-basis: calc(50% - 3rem);
+  flex-shrink: 0;
+  flex-grow: 0;
+
+}
+
+.panda__icon {
+  width:50px;
+  height:50px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-right: 2rem;
+  transition: transform .2s;
+
+  &:hover {
+    transform: scale(2);
+    border-radius: 10px;
+  }
+}
+
+
+
+.video1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10%;
+}
+
+.video1__content {
+  width: 50%;
+}
+
+.video1__title {
+  font-size: 25px;
+}
+
+
+.video__thumb-wrap {
+  flex-basis: calc(50% - 2rem);
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: 1rem;
+  height: 100%;
+  width:100%;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18%;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.video__thumb {
+  background-image: url("../assets/2pandas.png");
+  background-repeat: no-repeat;
+  min-height: 350px;
+  background-size: cover;
+  cursor: pointer;
+  background-position: center;
+  width: 90%;
+  position: relative;
+  }
+
+  .video__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0%;
+    background: rgba(229,225,230, 0.95);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+
+    .close {
+     display: inline-block;
+     cursor: pointer;
+     position: absolute;
+     top: 30px;
+     right: 30px;
+   }
+  }
+
+  .contain__wrapper {
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    transform: translateY(50%);
+  }
+
+  .video__thumb2 {
+    background-image: url("../assets/redpandasnow.png");
+    background-repeat: no-repeat;
+    min-height: 350px;
+    background-size: cover;
+    cursor: pointer;
+    background-position: center;
+    width: 90%;
+    position: relative;
+  }
+
+  .video__overlay2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(229,225,230, 0.95);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+
+    .close2 {
+      display: inline-block;
+      cursor: pointer;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+  }
+
+  .video__thumb3 {
+    background-image: url("../assets/dodotheredpanda.png");
+    background-repeat: no-repeat;
+    min-height: 350px;
+    background-size: cover;
+    cursor: pointer;
+    background-position: center;
+    width: 90%;
+    position: relative;
+  }
+
+  .video__overlay3 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(229,225,230, 0.95);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+
+    .close3 {
+      display: inline-block;
+      cursor: pointer;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+.hero__image{
+  object-fit:cover;
+}
+.hero__content{z-index: 1;}
+.slide-left {
+	animation: slide-left 2s ease-in .5s both;
+  /* ----------------------------------------------
+ * Generated by Animista on 2022-4-19 14:57:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+}
+#message{
+}
+#contact-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10%;
+}
+.submitarea{
+  display: flex;
+  background-color: $pramarycolor-blue;
+  border-bottom: .5px solid white;
+
+  .submitarea-boxone{
+    width:50%;
+    padding-top:1rem;
+    padding-left:10%;
+    padding-right:3rem;
+    color:white;
+  }
+  .submitarea-boxtwo{
+    width:50%;
+    padding-top:1rem;
+    padding-left: 3rem;
+    color:white;
+    padding-right:10%;
+    text-align:center;
+
+
+    label{
+      padding-top:1rem;
+      text-align: left;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+
+
+      #submit {
+        color: $fontcolor;
+        background-color: $secondarycolor-yellow;
+        margin: 0 auto;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+        padding:0.75rem ;
+        margin-top:1rem;
+        width:30%;
+        margin-bottom:1rem;
+      }
+
+      input[type=text], textarea {
+        border: none;
+        border: 1px solid white;
+        background-color: $pramarycolor-blue;
+        color:white;
+        padding:5px;
+      }
+      select[type=text], textarea {
+        border: none;
+        border: 1px solid white;
+        background-color: $pramarycolor-blue;
+        color:white;
+        padding:5px;
+      }
+
+    }
+    }
+
+
+}
+
+
+
+/* CONTACT FORM */
+
+.contactform-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(229,225,230, 0.95);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  color:black;
+
+    .close4 {
+      display: inline-block;
+      cursor: pointer;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+}
+
+.contain-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  align-items: center;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+
+  p {
+    text-align: center;
+  }
+}
+
+#contact-submit {
+  background: rgb(255, 255, 255);
+  filter: drop-shadow(5px 5px 8px #000);
+  border-radius: .25rem;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate(0, 85%);
+  top:10%;
+}
+
+#first-name, #last-name, #message-content {
+  display: flex;
+  width: 60%;
+  height: 50px;
+  margin: auto;
+  align-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 850px) {
+  .submitarea{flex-direction: column;
+    .submitarea-boxone{width:100%;}
+    .submitarea-boxtwo{width:100%;}
+  }
+  .video1{flex-direction: column;}
+  .video1__content{width:100%;}
+  .video__thumb{width:100%;}
+  .video2{flex-direction: column;}
+  .video__thumb2{width:100%;}
+  .video3{flex-direction: column;}
+  .video__thumb3{width:100%;}
+}
+
+@media screen and (max-width: 700px) {
+  .icon__section{flex-direction: column;
+  columns: 1;}
+    .topnav a {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      transition: all 0.5s ease;
+
+    }
+  }
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 700px) {
+    .topnav.responsive {position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    .start{padding-top: 30px;}
+}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      transition: all 0.5s ease;
+    }
+    .topnav.responsive a.icon:hover{
+      color:$secondarycolor-yellow;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      transition: all 0.5s ease;
+    }
+
+    .topnav button{
+      margin-bottom: 20px;
+    }
+  }
+
+
+
+.navbar {
+    background-color: $pramarycolor-blue;
+    color: #fff;
+    height: 70px;
+    margin: 0px;
+}
+
+.navbar a:hover {
+    color: $secondarycolor-yellow;
+    transition: all 0.5s ease;
+}
+
+
+
+.navbar .flex {
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible;
+}
+
+
+.container {
+    margin: 0 auto;
+    overflow: auto;
+    padding-left:10%;
+    padding-right:10%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+//
+
+
+.hero {
+    height: 500px;
+    background-color: $pramarycolor-burgundy;
+    color: #fff;
+    position: relative;
+}
+@media only screen and (max-width: 600px) {
+    .hero{
+        height: auto;
+        padding: 20px 0px;
+    }
+  }
+
+.hero__img {
+    border-radius: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+    }
+  }
+
+// CTA
+
+.cta {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    margin-bottom: 150px;
+    .cta_gradient{
+       background-image: linear-gradient(180deg, rgba(108,29,69,0.4) 0%, rgba(255,255,255,1) 100%);
+       z-index: 1;
+       position: relative;
+       height: 301px;
+       background-size: cover;
+       margin-bottom: 149px;
+    }
+}
+
+
+
+
+.cta__card {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:2;
+}
+
+@media only screen and (max-width: 600px) {
+    .cta__card {
+        position: absolute;
+        top: 20%;
+        left: auto;
+        transform: none;
+    }
+  }
+
+.cta__button {
+    padding: 14px 16px;
+}
+
+// Story
+
+.story__img {
+    background-size: cover;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    margin-left: auto;
+}
+
+.story {
+    margin-bottom: 100px;
+}
+
+
+// cardlist
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+.cards__item {
+    display: flex;
+    padding: 1rem;
+}
+
+@media (min-width:750px) {
+    .cards__item { width: 50%;}
+
+}
+
+@media (min-width:1300px) {
+    .cards__item {
+        width: 25%;
+    }
+}
+
+.card {
+    background-color: $secondarycolor-grey;
+    border-radius: 0.25rem;
+    box-shadow: $boxshadow ;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+}
+.card__content {
+    padding: 1rem;
+}
+
+.card-h3 {
+    color: $pramarycolor-burgundy;
+}
+
+.card__button {
+    margin-top: auto;
+    padding: 14px 16px;
+}
+
+.cardlist__h2 {
+   text-align: center;
+}
+
+.cardlist {
+    margin-bottom: 100px;
+}
+
+
+// video story
+.videostory {
+    margin-bottom: 100px;
+    background-color: #d3d3d3;
+}
+
+.story {
+    margin-top: 80px;
+}
+
+
+// footer
+
+footer {
+    background-color: $pramarycolor-blue !important;
+    color: #fff;
+    height: 90px;
+    margin:auto;
+}
+
+.grid-3 {
+grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-content {
+    margin: auto;
+}
+
+
+footer a {
+    color: #fff ;
+}
