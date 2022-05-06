@@ -31,3 +31,21 @@ BEM
 
 ##Internet Host
   Github
+
+----------------------
+
+##How I Built My Website
+
+  My Css Methodology Consists of BEM.
+  
+  The stuff coded under the div=topnav is ONLY the mobile nav bar, not the main nav bar. 
+  
+  The opening function of the hamburger menu is coded in JavaScript.
+  
+  
+  
+  
+  
+ 
+  
+  
